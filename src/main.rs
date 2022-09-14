@@ -57,6 +57,12 @@ impl From<u8> for Format {
 
 fn main() {
     let args = env::args().collect::<Vec<String>>();
+
+    if args.len() < 2 {
+        println!("Usage: {} <number>", args[0]);
+        return;
+    }
+
     let num = &args[1];
     let format: Format;
 
