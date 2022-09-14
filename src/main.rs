@@ -84,11 +84,10 @@ fn main() {
 
     if let Ok(num) = num_int {
         println!(
-            "{} {}{:10}{}",
+            "{} {}{}",
             format.name(),
             format.prefix(),
-            format.encode(num),
-            "(input)"
+            format.encode(num)
         );
         for i in 0..=3 {
             if i == format.clone() as u8 {
